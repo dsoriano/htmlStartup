@@ -1,6 +1,6 @@
 /*
-* www.KNACSS.com V2.6d @author: Raphael Goetter, Alsacreations
-* Licence CC-BY http://creativecommons.org/licenses/by/3.0/fr/
+* www.KNACSS.com V2.6j @author: Raphael Goetter, Alsacreations
+* Licence CC-BY http://creativecommons.org/licenses/by/3.0/fr/ 
 */
 
 /* ----------------------------- */
@@ -14,13 +14,13 @@ html {
 body {
 	background-color: #fff;
 	color: #000;
-	font-family: "Century Gothic", helvetica, arial, sans-serif;
+	font-family: helvetica, arial, sans-serif;
 	font-size: 1.4em; /* equiv 14px */
 	line-height: 1.5; /* adapt to your design */
 }
 
 /* font-sizing for content */
-/* preserve vertical-rythm, thanks to http://soqr.fr/vertical-rhythm/ */
+/* preserves vertical-rythm, thanks to http://soqr.fr/vertical-rhythm/ */
 p,
 ul,
 ol,
@@ -33,8 +33,7 @@ label,
 textarea,
 caption,
 details, 
-figure, 
-hgroup {
+figure {
 	font-size: 1em; /* equiv 14px */
 	line-height: 1.5;
 	margin: .75em 0 0;
@@ -106,6 +105,9 @@ ul,
 ol {
 	padding-left: 2em;
 }
+ul.unstyled {
+	list-style: none;
+}
 code, 
 pre,
 samp,
@@ -135,6 +137,17 @@ code {
 mark {
 	padding:2px 4px;
 	background: #ff0;
+}
+sup,
+sub {
+	vertical-align: 0;
+	position: relative;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
 }
 
 table { margin-bottom: 1.5em; }
@@ -167,17 +180,6 @@ li ol {
 img, table, td, blockquote, code, pre, textarea, input, video {
 	max-width: 100%;
 }
-
-/* you shall not pass */
-div, textarea, table, td, th, code, pre, samp {
-	word-wrap: break-word;
-	-webkit-hyphens: auto;
-	-moz-hyphens: auto;
-	-ms-hyphens: auto;
-	-o-hyphens: auto;
-	hyphens: auto;
-}
-
 /* pictures */
 img {
 	height: auto;
@@ -215,8 +217,8 @@ body > script {display: none !important;}
 /* switching box model for all elements */
 * {
 	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 /* float layout */
@@ -257,61 +259,60 @@ body > script {display: none !important;}
 .inbl {
 	display: inline-block;
 	vertical-align: top;
-	margin-right: -.25em;
 }
 
 /* flexbox layout */
 .flex {
-	display : -webkit-box;
-	display : -moz-box;
+	display: -webkit-box;
+	display: -moz-box;
 	display: -ms-flexbox;
-	display : -webkit-flex;
-	display : flex;
+	display: -webkit-flex;
+	display: flex;
 }
 .flex-h {
 	-webkit-box-orient: horizontal;
-	-moz-box-orient: horizontal;
+	   -moz-box-orient: horizontal;
 	-webkit-flex-direction: row;
-	-ms-flex-direction: row;
-	flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
 }
 .flex-v {
 	-webkit-box-orient: vertical;
-	-moz-box-orient: vertical;
+	   -moz-box-orient: vertical;
 	-webkit-flex-direction: column;
-	-ms-flex-direction: column;
-	flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 }
 .flex-fluid {
 	-moz-box-flex: 1;
 	-webkit-flex: 1;
-	-moz-flex: 1;
-	-ms-flex: 1;
-	flex: 1;
+	   -moz-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
 }
 .flex-start {
 	-webkit-box-ordinal-group: -1;
 	-moz-box-ordinal-group: 0;
-	-ms-flex-order : -1;
-	-webkit-order : -1;
-	-moz-order : -1;
-	order : -1;
+	-ms-flex-order: -1;
+	-webkit-order: -1;
+	   -moz-order: -1;
+	        order: -1;
 }
 .flex-mid {
 	-webkit-box-ordinal-group: 1;
 	-moz-box-ordinal-group: 1;
-	-ms-flex-order : 1;
-	-webkit-order : 1;
-	-moz-order : 1;
-	order : 1;
+	-ms-flex-order: 1;
+	-webkit-order: 1;
+	   -moz-order: 1;
+	        order: 1;
 }
 .flex-end {
 	-webkit-box-ordinal-group: 42;
 	-moz-box-ordinal-group: 42;
-	-ms-flex-order : 42;
-	-webkit-order : 42;
-	-moz-order : 42;
-	order : 42;
+	-ms-flex-order: 42;
+	-webkit-order: 42;
+	   -moz-order: 42;
+	        order: 42;
 }
 
 /* alignments (blocks and inline) */
@@ -342,7 +343,7 @@ img.left, img.right {
 .txtright  { text-align: right; }
 .txtcenter { text-align: center; }
 
-/* blocks widths (percentage and pixels) */
+/* blocks widths (percentages and pixels) */
 .w10    { width: 10%; }
 .w20    { width: 20%; }
 .w25    { width: 25%; }
@@ -370,34 +371,36 @@ img.left, img.right {
 .w800p  { width: 800px; }
 .w960p  { width: 960px; }
 .mw960p { max-width: 960px; }
+.w1140p  { width: 1140px; }
+.mw1140p { max-width: 1140px; }
 
 /* spacing helpers
 p,m = padding,margin
 a,t,r,b,l = all,top,right,bottom,left
-s,m,l,n = small(10px),medium(20px),large(30px),none(0)
+s,m,l,n,0 = small(10px),medium(20px),large(30px), zero or none(0)
 source https://github.com/stubbornella/oocss/blob/master/core/spacing/space.css
 */
-.m-reset, .ma0 { margin: 0 !important; }
-.p-reset, .pa0 { padding: 0 !important; }
-.ma1, .mas { margin: 10px !important; }
-.ma2, .mam { margin: 20px !important; }
-.ma3, .mal { margin: 30px !important; }
+.m-reset, .ma0 { margin: 0; }
+.p-reset, .pa0 { padding: 0; }
+.ma1, .mas { margin: 10px; }
+.ma2, .mam { margin: 20px; }
+.ma3, .mal { margin: 30px; }
 .pa1, .pas { padding: 10px; }
 .pa2, .pam { padding: 20px; }
 .pa3, .pal { padding: 30px; }
 
-.mt0, .mtn { margin-top: 0 !important; }
-.mt1, .mts { margin-top: 10px !important; }
-.mt2, .mtm { margin-top: 20px !important; }
-.mt3, .mtl { margin-top: 30px !important; }
+.mt0, .mtn { margin-top: 0; }
+.mt1, .mts { margin-top: 10px; }
+.mt2, .mtm { margin-top: 20px; }
+.mt3, .mtl { margin-top: 30px; }
 .mr0, .mrn { margin-right: 0; }
 .mr1, .mrs { margin-right: 10px; }
 .mr2, .mrm { margin-right: 20px; }
 .mr3, .mrl { margin-right: 30px; }
-.mb0, .mbn { margin-bottom: 0 !important; }
-.mb1, .mbs { margin-bottom: 10px !important; }
-.mb2, .mbm { margin-bottom: 20px !important; }
-.mb3, .mbl { margin-bottom: 30px !important; }
+.mb0, .mbn { margin-bottom: 0; }
+.mb1, .mbs { margin-bottom: 10px; }
+.mb2, .mbm { margin-bottom: 20px; }
+.mb3, .mbl { margin-bottom: 30px; }
 .ml0, .mln { margin-left: 0; }
 .ml1, .mls { margin-left: 10px; }
 .ml2, .mlm { margin-left: 20px; }
@@ -473,7 +476,7 @@ textarea {
 /* ==iefix */
 /* ----------------------------- */
 
-/* haslayout for IE6/IE7 */
+/* hasLayout for IE6/IE7 */
 .ie67 .clearfix,
 .ie67 .line,
 .ie67 .mod,
@@ -483,7 +486,7 @@ textarea {
 }
 
 /* inline-block and table-cell for IE6/IE7 */
-/* warning: .col needs width on IE6/IE7 */
+/* warning: .col needs a width on IE6/IE7 */
 .ie67 .btn,
 .ie67 .col,
 .ie67 .inbl {
