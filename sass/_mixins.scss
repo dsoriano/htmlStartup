@@ -1,0 +1,81 @@
+// Sass mixins : don't touch or you'll be banned ;)
+// px to em/rem
+
+@mixin rem($size) {
+  @if unitless($size) {
+    font-size: ($size * 1rem) / 1rem * $base-font-size;
+    font-size: $size * 1rem;
+  }
+  @else {
+    @warn "Please make sure `$size` is unitless."
+  }
+}
+@mixin em($size) {
+  @if unitless($size) {
+    $bf: $base-font-size / 1px;
+    font-size: $size / $bf * 1em;
+  }
+  @else {
+    @warn "Please make sure `$size` is unitless."
+  }
+}
+@mixin px($size) {
+  @if unitless($size) {
+    $bf: $base-font-size / 1px;
+    font-size: $size * $bf * 1px;
+  }
+  @else {
+    @warn "Please make sure `$size` is unitless."
+  }
+}
+// End Sass mixins
+
+
+// Create old Knacss padding and margin shotcuts (i.e .pa1, .ml2, etc.)
+@mixin pa-ma-shotcuts($sizes) {
+  .m-reset, .ma0 {
+    margin: 0;
+  }
+
+  .p-reset, .pa0 {
+    padding: 0;
+  }
+
+  @each $size in $sizes {
+    $size-px: $size * 10;
+    .pa#{$size} {
+      padding: #{$size-px}px;
+    }
+    .ma#{$size} {
+      padding: #{$size-px}px;
+    }
+  }
+
+  @each $size in $sizes {
+    $size-px: $size * 10;
+    .pt#{$size} {
+      padding-top: #{$size-px}px;
+    }
+    .pb#{$size} {
+      padding-bottom: #{$size-px}px;
+    }
+    .pl#{$size} {
+      padding-left: #{$size-px}px;
+    }
+    .pr#{$size} {
+      padding-right: #{$size-px}px;
+    }
+    .mt#{$size} {
+      padding-top: #{$size-px}px;
+    }
+    .mb#{$size} {
+      padding-bottom: #{$size-px}px;
+    }
+    .ml#{$size} {
+      padding-left: #{$size-px}px;
+    }
+    .mr#{$size} {
+      padding-right: #{$size-px}px;
+    }
+  }
+}
