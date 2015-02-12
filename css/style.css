@@ -1226,6 +1226,194 @@ input[type='submit']::-moz-focus-inner {
 }
 
 /* ----------------------------- */
+/* ==icons and bullets	         */
+/* ----------------------------- */
+/* line 5, F:/www/git/htmlStartup/sass/vendors/knacss/_06-icons.scss */
+.icon {
+  display: inline-block;
+}
+
+/* line 8, F:/www/git/htmlStartup/sass/vendors/knacss/_06-icons.scss */
+.icon:before,
+.icon.after:after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -0.1em;
+  margin: 0 0.3em 0 0;
+  font: 1.4em/1 sans-serif;
+  color: #000;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+  speak: none;
+}
+
+@media (min-device-width: 768px) {
+  /* line 22, F:/www/git/htmlStartup/sass/vendors/knacss/_06-icons.scss */
+  .icon:before,
+  .icon.after:after {
+    font: 1em/0.6 sans-serif;
+    -webkit-transform: rotateZ(0.05deg);
+  }
+}
+/* line 28, F:/www/git/htmlStartup/sass/vendors/knacss/_06-icons.scss */
+.icon.after:after {
+  margin: 0 0 0 8px;
+}
+
+/* line 32, F:/www/git/htmlStartup/sass/vendors/knacss/_06-icons.scss */
+.icon.after:before {
+  content: "" !important;
+}
+
+/* line 37, F:/www/git/htmlStartup/sass/vendors/knacss/_06-icons.scss */
+.icon-rate:before,
+.icon-rate.after:after {
+  content: "\2605";
+}
+
+/* line 41, F:/www/git/htmlStartup/sass/vendors/knacss/_06-icons.scss */
+.icon-unrate:before,
+.icon-unrate.after:after {
+  content: "\2606";
+}
+
+/* line 46, F:/www/git/htmlStartup/sass/vendors/knacss/_06-icons.scss */
+.icon-check:before,
+.icon-check.after:after {
+  content: "\2713";
+}
+
+/* line 51, F:/www/git/htmlStartup/sass/vendors/knacss/_06-icons.scss */
+.icon-uncheck:before,
+.icon-uncheck.after:after {
+  content: "\2717";
+}
+
+/* line 56, F:/www/git/htmlStartup/sass/vendors/knacss/_06-icons.scss */
+.icon-cloud:before,
+.icon-cloud.after:after {
+  content: "\2601";
+}
+
+/* line 61, F:/www/git/htmlStartup/sass/vendors/knacss/_06-icons.scss */
+.icon-dl:before,
+.icon-dl.after:after {
+  content: "\21E3";
+  font-weight: bold;
+}
+
+/* line 67, F:/www/git/htmlStartup/sass/vendors/knacss/_06-icons.scss */
+.icon-cross:before,
+.icon-cross.after:after {
+  content: "\2716";
+  font-weight: bold;
+}
+
+/* line 73, F:/www/git/htmlStartup/sass/vendors/knacss/_06-icons.scss */
+.icon-arrow1:before,
+.icon-arrow1.after:after {
+  content: "\2192";
+  position: relative;
+  top: -0.15em;
+}
+
+/* line 80, F:/www/git/htmlStartup/sass/vendors/knacss/_06-icons.scss */
+.icon-arrow2:before,
+.icon-arrow2.after:after {
+  content: "\279E";
+}
+
+/* line 85, F:/www/git/htmlStartup/sass/vendors/knacss/_06-icons.scss */
+.icon-arrow3:before,
+.icon-arrow3.after:after {
+  content: "\279A";
+}
+
+/* line 90, F:/www/git/htmlStartup/sass/vendors/knacss/_06-icons.scss */
+.icon-bracket1:before,
+.icon-bracket1.after:after {
+  content: "\2039";
+  font-weight: bold;
+  font-size: 1.6em;
+  position: relative;
+  top: -0.15em;
+}
+
+/* line 99, F:/www/git/htmlStartup/sass/vendors/knacss/_06-icons.scss */
+.icon-bracket2:before,
+.icon-bracket2.after:after {
+  content: "\203A";
+  font-weight: bold;
+  font-size: 1.6em;
+  position: relative;
+  top: -0.15em;
+}
+
+/* line 108, F:/www/git/htmlStartup/sass/vendors/knacss/_06-icons.scss */
+.icon-up:before,
+.icon-up.after:after {
+  content: "\25B2";
+}
+
+/* line 113, F:/www/git/htmlStartup/sass/vendors/knacss/_06-icons.scss */
+.icon-down:before,
+.icon-down.after:after {
+  content: "\25BC";
+}
+
+/* line 118, F:/www/git/htmlStartup/sass/vendors/knacss/_06-icons.scss */
+.icon-bull:before,
+.icon-bull.after:after {
+  content: "\2022";
+  font-size: 1.2em;
+  top: -0.05em;
+}
+
+/* line 125, F:/www/git/htmlStartup/sass/vendors/knacss/_06-icons.scss */
+.icon-bull2:before,
+.icon-bull2.after:after {
+  content: "\25E6";
+  top: -0.05em;
+}
+
+/* line 131, F:/www/git/htmlStartup/sass/vendors/knacss/_06-icons.scss */
+.icon-bull3:before,
+.icon-bull3.after:after {
+  content: "\2023";
+  font-size: 1.6em;
+  top: -0.05em;
+}
+
+/* line 138, F:/www/git/htmlStartup/sass/vendors/knacss/_06-icons.scss */
+.icon-nav:before,
+.icon-nav.after:after {
+  content: "\2261";
+  font-weight: bold;
+}
+
+/* line 144, F:/www/git/htmlStartup/sass/vendors/knacss/_06-icons.scss */
+.icon-losange:before,
+.icon-losange.after:after {
+  content: "\25C6";
+}
+
+/* line 149, F:/www/git/htmlStartup/sass/vendors/knacss/_06-icons.scss */
+.icon-asteri:before,
+.icon-asteri.after:after {
+  content: "\2731";
+  font-weight: bold;
+}
+
+/* line 155, F:/www/git/htmlStartup/sass/vendors/knacss/_06-icons.scss */
+.icon-mail:before,
+.icon-mail.after:after {
+  content: "\2709";
+  font-size: 1.6em;
+  top: -.05em;
+}
+
+/* ----------------------------- */
 /* ==desktop and HD devices      */
 /* ----------------------------- */
 @media (min-width: 1025px) {
